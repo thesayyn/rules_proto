@@ -37,6 +37,8 @@ def proto_library(**attrs):
       **attrs: Rule attributes
     """
 
+    print("here", native.package_name())
+
     # buildifier: disable=native-proto
     native.proto_library(**_add_migration_tag(attrs))
 
